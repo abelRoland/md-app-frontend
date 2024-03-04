@@ -4,7 +4,7 @@
 
 ### To-Do
 
-- [ ] Do the routes
+- [X] Do the routes
 - [ ] Creating Containers for the Home Page
 - [ ] Creating Basic Components
 - [ ] Navigation via Sidebar
