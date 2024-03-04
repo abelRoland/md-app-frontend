@@ -1,3 +1,4 @@
+import TipsContainer from '@/components/tipContainer'
 import styles from './home.module.css'
 import Link from 'next/link'
 
@@ -14,8 +15,7 @@ export default function Home() {
             SEE ALL
           </Link>
         </div>
-        {/* Make Tip Container Component */}
-        <h3>Tips List</h3>
+        <TipsContainer />
       </div>
       <div className={styles.headerMedia}>
         <h2>Videos & Links</h2>
