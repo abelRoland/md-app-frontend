@@ -1,0 +1,18 @@
+.screenContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 3rem) 1fr 3rem 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 0.5rem;
+  background-color: var(--black);
+  height: 100vh;
+}
+
+.navbar {
+  grid-area: 1 / 1 / 2 / 8;
+}
+.sidebar {
+  grid-area: 2 / 1 / 6 / 2;
+  background-color: var(--gray-90);
+  max-width: 150px;
+}
