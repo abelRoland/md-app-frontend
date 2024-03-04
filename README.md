@@ -4,8 +4,8 @@
 
 ### To-Do
 
-- [X] Do the routes
-- [ ] Creating Containers for the Home Page
+- [x] Do the routes
+- [x] Creating Containers for the Home Page
 - [ ] Creating Basic Components
 - [ ] Navigation via Sidebar
 - [ ] Fetching Tips
