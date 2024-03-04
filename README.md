@@ -6,8 +6,8 @@
 
 - [x] Do the routes
 - [x] Creating Containers for the Home Page
-- [ ] Creating Basic Components
-- [ ] Navigation via Sidebar
+- [X] Creating Basic Components
+- [X] Navigation via Sidebar
 - [ ] Fetching Tips
 - [ ] Fetching Media
 - [ ] Creating Video Container
