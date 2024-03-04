@@ -8,7 +8,7 @@
 - [x] Creating Containers for the Home Page
 - [X] Creating Basic Components
 - [X] Navigation via Sidebar
-- [ ] Fetching Tips
+- [X] Fetching Tips
 - [ ] Fetching Media
 - [ ] Creating Video Container
 - [ ] Creating Links Container
