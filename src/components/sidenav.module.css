@@ -1,0 +1,28 @@
+.navLinkContainer {
+  display: flex;
+  padding-left: 1rem;
+}
+
+.navLinkContainerActive {
+  display: flex;
+  padding-left: 1rem;
+  background-color: var(--gray-75);
+  border-right: 4px solid var(--primary-1);
+}
+
+.navLinkContainerActive:hover {
+  background-color: var(--gray-60);
+}
+
+.navLinkContainer:hover {
+  background-color: var(--gray-60);
+}
+
+.navigationLinkName {
+  margin: 0.2rem 0;
+  padding: 0.5rem;
+}
+
+.icons {
+  width: 1.25rem;
+}
