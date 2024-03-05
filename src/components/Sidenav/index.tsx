@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import styles from './sidenav.module.css'
 import { usePathname, useSearchParams, useParams } from 'next/navigation'
+import { Suspense } from 'react'
+import Loading from '../Loading'
 import {
   HomeIcon,
   UserIcon,
@@ -34,7 +36,7 @@ export default function SideNav() {
   const fullPath = `${pathname}${mediaKind}`
 
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       {links.map((link) => {
         const LinkIcon = link.icon
         return (
@@ -52,6 +54,6 @@ export default function SideNav() {
           </Link>
         )
       })}
-    </>
+    </Suspense>
   )
 }
