@@ -1,5 +1,7 @@
 import { FormEvent } from 'react'
 import { UserType } from './constants'
+import Airtable, { FieldSet, Record as AirtableRecord } from 'airtable'
+import { TipRecords } from '@/lib/global'
 
 export async function fetchMedias(mediaKind: string) {
   let path = `/medias/?${mediaKind}`
@@ -68,5 +70,69 @@ export const handleSubmit = async (
   } catch (error) {
     console.error('Failed to update user:', error)
     setMessage('Failed to update user.')
+  }
+}
+
+export async function retrieveRecords(setRecords: Function) {
+  let base = new Airtable({
+    apiKey: process.env.AIRTABLE_PRIVATE_KEY,
+  }).base(process.env.AIRTABLE_BASE_ID as string)
+
+  return new Promise<void>((resolve, reject) => {
+    base(process.env.AIRTABLE_TABLE_NAME as string)
+      .select({ maxRecords: 30 })
+      .eachPage(
+        (
+          data: ReadonlyArray<AirtableRecord<FieldSet>>,
+          fetchNextPage: () => void
+        ) => {
+          const formattedData: TipRecords[] = data.map((record) => ({
+            id: record.id,
+            fields: record.fields as TipRecords['fields'],
+          }))
+          setRecords((prevRecords: TipRecords[]) => [
+            ...prevRecords,
+            ...formattedData,
+          ])
+          fetchNextPage()
+        },
+        (error) => {
+          if (error) {
+            reject(error)
+          } else {
+            resolve()
+          }
+        }
+      )
+  })
+}
+
+export async function fetchTip(id: string): Promise<TipRecords | null> {
+  if (!id) return null
+
+  try {
+    const base = new Airtable({
+      apiKey: process.env.AIRTABLE_PRIVATE_KEY,
+    }).base(process.env.AIRTABLE_BASE_ID as string)
+
+    const record = await base(process.env.AIRTABLE_TABLE_NAME as string).find(
+      id
+    )
+
+    if (record) {
+      return {
+        id: record.id,
+        fields: {
+          tip_kind: record.fields.tip_kind as string,
+          tip_title: record.fields.tip_title as string,
+          tip_description: record.fields.tip_description as string,
+        },
+      }
+    } else {
+      return null
+    }
+  } catch (error) {
+    console.error('Error fetching tip:', error)
+    return null
   }
 }
