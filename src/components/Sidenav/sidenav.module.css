@@ -3,6 +3,10 @@
   padding-left: 1rem;
 }
 
+.navLinkContainer:hover {
+  background-color: var(--gray-60);
+}
+
 .navLinkContainerActive {
   display: flex;
   padding-left: 1rem;
@@ -14,15 +18,18 @@
   background-color: var(--gray-60);
 }
 
-.navLinkContainer:hover {
-  background-color: var(--gray-60);
-}
-
 .navigationLinkName {
   margin: 0.2rem 0;
   padding: 0.5rem;
+  @media (min-width: 701px) and (max-width: 1120px) {
+    display: none;
+  }
 }
 
 .icons {
   width: 1.25rem;
+  @media (min-width: 701px) and (max-width: 1120px) {
+    width: 2rem;
+    margin: 0.5rem 0;
+  }
 }
