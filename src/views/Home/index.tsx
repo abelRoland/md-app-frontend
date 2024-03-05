@@ -1,14 +1,21 @@
+'use client'
 import TipsContainer from '@/components/TipContainer'
 import VideosHome from '@/components/VideosHome'
 import styles from './home.module.css'
 import Link from 'next/link'
 import LinkHome from '@/components/LinkHome'
+import { Users } from '@/lib/global'
+import { useState, Suspense, useEffect } from 'react'
 
-export default function Home() {
+type HomeProps = {
+  user: Users
+}
+
+export default function Home({ user }: HomeProps) {
   return (
     <>
       <div className={styles.headerPage}>
-        <h1>Hello</h1>
+        <h1>{`Hello ${user.name}`}</h1>
       </div>
       <div className={styles.tipsContainer}>
         <div className={styles.tipsHeader}>
