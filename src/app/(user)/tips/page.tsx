@@ -1,3 +1,5 @@
-export default function Page() {
-  return <h1>Tips Page</h1>
+import Tips from '@/views/Tips'
+
+export default function Index() {
+  return <Tips />
 }

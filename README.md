@@ -17,5 +17,6 @@
 - [X] Create Context for User
 - [X] Auth page
 - [X] Create Form to edit user
+- [ ] Create pages of links media and LinkID, TipId...
 - [ ] Getting personal advice via AI
 - [ ] SEO, PWA and security

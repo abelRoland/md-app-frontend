@@ -1,3 +1,5 @@
-export default function Page() {
-  return <h1>Videos Page</h1>
+import VideoView from '@/views/Videos';
+
+export default function Videos() {
+  return <VideoView />;
 }
