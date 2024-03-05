@@ -12,8 +12,7 @@ import { LoadTop } from '@/lib/constants'
 export default function TipsContainer() {
   const [records, setRecords] = useState<TipRecords[]>([])
   const pathname = usePathname()
-  const loading = true
-
+  
   useEffect(() => {
     retrieveRecords(setRecords)
   }, [])
