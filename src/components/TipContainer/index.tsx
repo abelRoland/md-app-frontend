@@ -34,7 +34,7 @@ export default function TipsContainer() {
   }, [])
 
   return (
-    <div className={styles.tipFlow}>
+    <div className={styles.tipContainer}>
       {records.map((record, key) => (
         <div className={styles.tipCard} key={key}>
           <p className={styles.tipKind}>{record.fields.tip_kind}</p>

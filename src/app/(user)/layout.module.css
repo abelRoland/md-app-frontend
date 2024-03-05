@@ -6,6 +6,9 @@
   grid-row-gap: 0.5rem;
   background-color: var(--black);
   height: 100vh;
+  @media (min-width: 701px) and (max-width: 1120px) {
+    grid-template-columns: 5rem repeat(6, 1fr);
+  }
 }
 
 .navbar {
@@ -15,4 +18,7 @@
   grid-area: 2 / 1 / 6 / 2;
   background-color: var(--gray-90);
   max-width: 150px;
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
