@@ -7,4 +7,7 @@
 
 .navbarText {
   padding: 0.75rem 1rem 0 0;
+  @media (max-width: 700px) {
+    display: none;
+  }
 }

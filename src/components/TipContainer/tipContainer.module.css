@@ -1,4 +1,4 @@
-.tipFlow {
+.tipContainer {
   display: flex;
   overflow-x: auto;
 }
