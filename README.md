@@ -10,7 +10,7 @@
 - [X] Navigation via Sidebar
 - [X] Fetching Tips
 - [X] Fetching Media
-- [ ] Deploying
+- [X] Deploying
 - [X] Creating Video Container
 - [X] Creating Links Container
 - [ ] Managing responsivity of Home page
