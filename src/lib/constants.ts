@@ -7,5 +7,17 @@ export enum Gender {
   MALE = 'male',
   FEMALE = 'female',
   NON_BINARY = 'non-binary',
-  NO_DECLARED = 'no-declared',
+  NOT_DECLARED = 'not-declared',
+}
+
+export type UserType = {
+  _id: string
+  name: string
+  email: string
+  age: number
+  gender: Gender
+}
+
+export type ProfileProps = {
+  user: UserType
 }

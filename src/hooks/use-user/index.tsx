@@ -16,7 +16,7 @@ const initialValue = {
     name: '',
     age: 0,
     email: '',
-    gender: Gender.NO_DECLARED,
+    gender: Gender.NOT_DECLARED,
     _id: '',
   },
   setUser: () => {},

@@ -16,6 +16,6 @@
 - [x] Managing responsivity of Home page
 - [X] Create Context for User
 - [X] Auth page
-- [ ] Create Form to edit user
+- [X] Create Form to edit user
 - [ ] Getting personal advice via AI
 - [ ] SEO, PWA and security
