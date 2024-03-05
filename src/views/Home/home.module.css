@@ -81,3 +81,16 @@
     margin: 0 1rem;
   }
 }
+
+.adviceButton {
+  grid-area: 2 / 6 / 3 / 8;
+  width: 2rem;
+  justify-self: end;
+  margin-right: 1rem;
+  align-self: center;
+  color: var(--secondary-2);
+}
+
+.adviceButton:hover {
+  cursor: pointer;
+}

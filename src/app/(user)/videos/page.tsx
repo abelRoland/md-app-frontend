@@ -1,5 +1,5 @@
-import VideoView from '@/views/Videos';
+import VideoView from '@/views/Videos'
 
 export default function Videos() {
-  return <VideoView />;
+  return <VideoView />
 }
