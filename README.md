@@ -14,7 +14,7 @@
 - [x] Creating Video Container
 - [x] Creating Links Container
 - [x] Managing responsivity of Home page
-- [ ] Create Context for User
+- [X] Create Context for User
 - [ ] Auth page
 - [ ] Create Form to edit user
 - [ ] Getting personal advice via AI

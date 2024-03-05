@@ -1,4 +1,4 @@
-import { MediaKind } from './constants'
+import { MediaKind, Gender } from './constants'
 export interface TipRecords {
   id: string
   fields: {
@@ -14,4 +14,12 @@ export interface Medias {
   description: string
   mediaLink: string
   mediaKind: MediaKind
+}
+
+export interface Users {
+  name: string;
+  age: number;
+  email: string;
+  gender: Gender;
+  _id: string;
 }
