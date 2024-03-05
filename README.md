@@ -15,7 +15,7 @@
 - [x] Creating Links Container
 - [x] Managing responsivity of Home page
 - [X] Create Context for User
-- [ ] Auth page
+- [X] Auth page
 - [ ] Create Form to edit user
 - [ ] Getting personal advice via AI
 - [ ] SEO, PWA and security
