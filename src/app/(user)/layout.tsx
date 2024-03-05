@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
-import Navbar from '@/components/navbar'
+import Navbar from '@/components/Navbar'
 import styles from './layout.module.css'
-import SideNav from '@/components/sidenav'
+import SideNav from '@/components/Sidenav'
 
 export const metadata: Metadata = {
   title: 'MG App',

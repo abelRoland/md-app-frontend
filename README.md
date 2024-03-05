@@ -9,12 +9,13 @@
 - [X] Creating Basic Components
 - [X] Navigation via Sidebar
 - [X] Fetching Tips
-- [ ] Fetching Media
-- [ ] Creating Video Container
-- [ ] Creating Links Container
+- [X] Fetching Media
+- [ ] Deploying
+- [X] Creating Video Container
+- [X] Creating Links Container
 - [ ] Managing responsivity of Home page
 - [ ] Create Context for User
 - [ ] Auth page
 - [ ] Create Form to edit user
 - [ ] Getting personal advice via AI
-- [ ] SEO and security
+- [ ] SEO, PWA and security
