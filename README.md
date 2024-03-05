@@ -6,14 +6,14 @@
 
 - [x] Do the routes
 - [x] Creating Containers for the Home Page
-- [X] Creating Basic Components
-- [X] Navigation via Sidebar
-- [X] Fetching Tips
-- [X] Fetching Media
-- [X] Deploying
-- [X] Creating Video Container
-- [X] Creating Links Container
-- [ ] Managing responsivity of Home page
+- [x] Creating Basic Components
+- [x] Navigation via Sidebar
+- [x] Fetching Tips
+- [x] Fetching Media
+- [x] Deploying
+- [x] Creating Video Container
+- [x] Creating Links Container
+- [x] Managing responsivity of Home page
 - [ ] Create Context for User
 - [ ] Auth page
 - [ ] Create Form to edit user
