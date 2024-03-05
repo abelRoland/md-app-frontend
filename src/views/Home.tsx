@@ -1,6 +1,8 @@
-import TipsContainer from '@/components/tipContainer'
+import TipsContainer from '@/components/TipContainer'
+import VideosHome from '@/components/VideosHome'
 import styles from './home.module.css'
 import Link from 'next/link'
+import LinkHome from '@/components/LinkHome'
 
 export default function Home() {
   return (
@@ -21,8 +23,7 @@ export default function Home() {
         <h2>Videos & Links</h2>
       </div>
       <div className={styles.videosContainer}>
-        {/* Make Videos Container Component */}
-        <h3>Videos List</h3>
+        <VideosHome />
         <div className={styles.videoContainerFooter}>
           <Link
             className={styles.seeAllVideosButton}
@@ -33,8 +34,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.linksContainer}>
-        {/* Make Videos Container Component */}
-        <h3>Links List</h3>
+        <LinkHome />
 
         <div className={styles.videoContainerFooter}>
           <Link
