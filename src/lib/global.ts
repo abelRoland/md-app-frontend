@@ -17,9 +17,9 @@ export interface Medias {
 }
 
 export interface Users {
-  name: string;
-  age: number;
-  email: string;
-  gender: Gender;
-  _id: string;
+  name: string
+  age: number
+  email: string
+  gender: Gender
+  _id: string
 }
