@@ -1,3 +1,5 @@
-export default function Page() {
-  return <h1>Links Page</h1>
+import LinksView from '@/views/Links';
+
+export default function Links() {
+  return <LinksView />;
 }

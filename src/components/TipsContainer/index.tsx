@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Airtable, { FieldSet, Record as AirtableRecord } from 'airtable'
 import { TipRecords } from '@/lib/global'
-import styles from './tipContainer.module.css'
+import styles from './tipsContainer.module.css'
 import Link from 'next/link'
 
 export default function TipsContainer() {

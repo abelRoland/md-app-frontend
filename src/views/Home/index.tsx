@@ -1,5 +1,5 @@
 'use client'
-import TipsContainer from '@/components/TipContainer'
+import TipsContainer from '@/components/TipsContainer'
 import VideosHome from '@/components/VideosHome'
 import styles from './home.module.css'
 import Link from 'next/link'
