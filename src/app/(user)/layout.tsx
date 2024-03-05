@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import SideNav from '@/components/Sidenav'
 
 export const metadata: Metadata = {
-  title: 'MG App',
+  title: 'MG Private',
   description:
     'The app page for the people with MG that are looking for some advices and support.',
 }
