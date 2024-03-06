@@ -18,7 +18,6 @@
 
 .load {
   display: block;
-  position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100px;
@@ -39,6 +38,14 @@
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
 }
 
 .top20 {
