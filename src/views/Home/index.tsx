@@ -1,6 +1,11 @@
 'use client'
 
-import { TipsContainer, VideosHome, Modal, LinksContainer } from '@/components'
+import {
+  TipsContainer,
+  VideosContainer,
+  Modal,
+  LinksContainer,
+} from '@/components'
 import styles from './home.module.css'
 import Link from 'next/link'
 import { SparklesIcon } from '@heroicons/react/24/outline'
@@ -64,12 +69,9 @@ export default function Home({ user }: HomeProps) {
         <h2>Videos & Links</h2>
       </div>
       <div className={styles.videosContainer}>
-        <VideosHome />
+        <VideosContainer />
         <div className={styles.videoContainerFooter}>
-          <Link
-            className={styles.seeAllVideosButton}
-            href="/videos?mediaKind=video"
-          >
+          <Link className={styles.seeAllVideosButton} href="/videos">
             SEE ALL
           </Link>
         </div>
@@ -78,10 +80,7 @@ export default function Home({ user }: HomeProps) {
         <LinksContainer />
 
         <div className={styles.videoContainerFooter}>
-          <Link
-            className={styles.seeAllVideosButton}
-            href="/links?mediaKind=link"
-          >
+          <Link className={styles.seeAllVideosButton} href="/links">
             SEE ALL
           </Link>
         </div>
