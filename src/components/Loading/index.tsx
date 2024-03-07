@@ -1,20 +1,9 @@
 import styles from './loading.module.css'
-import { LoadTop } from '@/lib/constants'
 
-type LoadPosition = 'fixed' | 'relative'
-
-type LoadProps = {
-  loadTop: LoadTop
-  loadPosition?: LoadPosition
-}
-
-export default function Loading({
-  loadTop,
-  loadPosition = 'fixed',
-}: LoadProps) {
+export default function Loading() {
   return (
-    <div
-      className={`${styles.load} ${styles[loadPosition]} ${styles[loadTop]}`}
-    />
+    <div className={styles.loadContainer}>
+      <div className={styles.load} />
+    </div>
   )
 }

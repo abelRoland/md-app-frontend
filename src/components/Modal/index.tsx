@@ -1,6 +1,5 @@
 import styles from './modal.module.css'
 import Loading from '../Loading'
-import { LoadTop } from '@/lib/constants'
 
 type ModalProps = {
   open: boolean
@@ -18,7 +17,7 @@ export default function Modal({ open, onClick, message, loading }: ModalProps) {
       onClick={onClick}
     >
       {loading ? (
-        <Loading loadTop={LoadTop.TOP30} />
+        <Loading />
       ) : (
         <div className={open ? styles.modalOpen : styles.modalClosed}>
           <p>{message}</p>

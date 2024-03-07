@@ -7,12 +7,11 @@ import Loading from '../Loading'
 
 import styles from './tipsContainer.module.css'
 import Link from 'next/link'
-import { LoadTop } from '@/lib/constants'
 
 export default function TipsContainer() {
   const [records, setRecords] = useState<TipRecords[]>([])
   const pathname = usePathname()
-  
+
   useEffect(() => {
     retrieveRecords(setRecords)
   }, [])
@@ -39,7 +38,7 @@ export default function TipsContainer() {
           </div>
         ))
       ) : (
-        <Loading loadTop={LoadTop.TOP30} />
+        <Loading />
       )}
     </div>
   )

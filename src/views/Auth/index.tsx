@@ -1,14 +1,12 @@
 'use client'
 
-import Loading from '@/components/Loading'
+import { Loading } from '@/components'
 import styles from './auth.module.css'
 import { useUser } from '@/hooks/use-user'
 import { fetchUsers } from '@/lib/actions'
 import { Users } from '@/lib/global'
 import { useRouter } from 'next/navigation'
 import { useCallback, useEffect, useState } from 'react'
-import { Suspense } from 'react'
-import { LoadTop } from '@/lib/constants'
 
 export default function Auth() {
   const [users, setUsers] = useState<Users[]>()
@@ -43,7 +41,7 @@ export default function Auth() {
       <h1 className={styles.header}>To start, choose a user</h1>
       {loading ? (
         <div>
-          <Loading loadTop={LoadTop.TOP30} loadPosition="relative" />
+          <Loading />
         </div>
       ) : (
         users?.map((user, key) => (
