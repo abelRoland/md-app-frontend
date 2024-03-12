@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
-import Navbar from '@/components/Navbar'
+import { Navbar, Sidenav } from '@/components'
 import styles from './layout.module.css'
-import SideNav from '@/components/Sidenav'
 
 export const metadata: Metadata = {
   title: 'MG Private',
@@ -20,7 +19,7 @@ export default async function Layout({
         <Navbar />
       </nav>
       <aside className={styles.sidebar}>
-        <SideNav />
+        <Sidenav />
       </aside>
       {children}
     </div>

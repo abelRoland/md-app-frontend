@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import styles from './sidenav.module.css'
-import { usePathname, useSearchParams, useParams } from 'next/navigation'
+import { usePathname, useParams } from 'next/navigation'
 import {
   HomeIcon,
   UserIcon,
@@ -19,19 +19,16 @@ const links = [
     icon: UserIcon,
   },
   { name: 'Tips', href: '/tips', icon: ChatBubbleOvalLeftEllipsisIcon },
-  { name: 'Links', href: '/links?mediaKind=link', icon: LinkIcon },
-  { name: 'Videos', href: '/videos?mediaKind=video', icon: VideoCameraIcon },
+  { name: 'Links', href: '/links', icon: LinkIcon },
+  { name: 'Videos', href: '/videos', icon: VideoCameraIcon },
   { name: 'Logout', href: '/auth', icon: ArrowLeftStartOnRectangleIcon },
 ]
 
 export default function SideNav() {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   const id = useParams<{ id: string }>()
   const idParams = id.id === undefined ? '' : `/${id.id}`
-  const query = searchParams.get('mediaKind')
-  const mediaKind = query === null ? '' : `?mediaKind=${query}`
-  const fullPath = `${pathname}${mediaKind}`
+  const fullPath = `${pathname}`
 
   return (
     <>

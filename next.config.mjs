@@ -19,7 +19,7 @@ const nextConfig = {
           {
             key: 'Content-Security-Policy',
             value:
-              "default-src 'self'; style-src-elem 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' https://www.youtube.com/ ; script-src 'self' 'unsafe-eval' https://www.youtube.com/; connect-src 'self' http://localhost:8000/ https://md-app-back-455005c83883.herokuapp.com/ https://api.airtable.com https://api.openai.com/v1/chat/completions blob: https://api.airtable.com/ https://www.youtube.com https://noembed.com/ https://youtu.be/ ; font-src 'self'; frame-src 'self' https://www.youtube.com/; img-src 'self' https://i.ytimg.com/ https://img.youtube.com; media-src 'self' blob: ; worker-src 'self' blob:",
+              "default-src 'self'; style-src-elem 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' https://www.youtube.com/ ; script-src 'self' 'unsafe-eval' https://www.youtube.com/; connect-src 'self' http://localhost:8000/ https://md-app-back-455005c83883.herokuapp.com/ https://api.airtable.com https://api.openai.com/v1/chat/completions https://img.youtube.com blob: https://api.airtable.com/ https://www.youtube.com https://noembed.com/ https://youtu.be/ ; font-src 'self'; frame-src 'self' https://www.youtube.com/; img-src 'self' https://i.ytimg.com/ https://img.youtube.com; media-src 'self' blob: ; worker-src 'self' blob:",
           },
           {
             key: 'X-Content-Type-Options',

@@ -1,3 +1,5 @@
+import VideoContainer from '@/components/VideosContainer/VideoContainer'
+
 export default async function Page({ params }: { params: { id: string } }) {
-  return <h1>{`Video ID: ${params.id}`}</h1>
+  return <VideoContainer params={params} />
 }

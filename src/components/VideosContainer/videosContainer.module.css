@@ -1,11 +1,32 @@
-.videoContainer {
+.videoContainerHome {
   display: flex;
   overflow-x: auto;
+  height: 230px;
 }
-.videoCard {
+
+.videoContainer {
+  max-width: 98.5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0.5rem;
+  border: 2px solid var(--gray-90);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.videoCardHome {
   margin: 0.75rem 0.5rem 1.5rem 0.5rem;
   flex: 0 0 auto;
   width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: var(--gray-90);
+  display: grid;
+}
+
+.videoCard {
+  margin: 0.75rem 0.5rem 1.5rem 0.5rem;
+  width: 96%;
   height: 200px;
   border-radius: 10px;
   background-color: var(--gray-90);

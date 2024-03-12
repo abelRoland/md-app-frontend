@@ -21,8 +21,3 @@ export type UserType = {
 export type ProfileProps = {
   user: UserType
 }
-
-export enum LoadTop {
-  TOP20 = 'top20',
-  TOP30 = 'top30',
-}

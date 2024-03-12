@@ -26,6 +26,11 @@
       "src": "/favicon-32X32.png",
       "type": "image/png",
       "sizes": "32x32"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "",
+      "sizes": "32x32"
     }
   ],
   "background_color": "#000000",

@@ -2,12 +2,15 @@
 
 import { fetchMedias } from '@/lib/actions'
 import React, { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Medias } from '@/lib/global'
 import Link from 'next/link'
-import styles from './linksHome.module.css'
+import styles from './linksContainer.module.css'
+import { Loading } from '..'
 
-export default function LinkHome() {
+export default function LinksContainer() {
   const [medias, setMedias] = useState<Medias[]>([])
+  const pathname = usePathname()
 
   async function populateMedias() {
     const response = await fetchMedias(`mediaKind=link`)
@@ -19,10 +22,17 @@ export default function LinkHome() {
   }, [])
 
   return (
-    <div className={styles.linksContainer}>
-      {medias.map((media: Medias, key: number) => {
-        return (
-          <div className={styles.linkCard} key={key}>
+    <div
+      className={
+        pathname === '/' ? styles.linksContainerHome : styles.linksContainer
+      }
+    >
+      {medias.length > 0 ? (
+        medias.map((media: Medias, key: number) => (
+          <div
+            className={pathname === '/' ? styles.linkCardHome : styles.linkCard}
+            key={key}
+          >
             <p className={styles.linkTitle}>{media.title}</p>
             <p className={styles.linkDescription}>{media.description}</p>
             <Link
@@ -34,8 +44,10 @@ export default function LinkHome() {
               VISIT
             </Link>
           </div>
-        )
-      })}
+        ))
+      ) : (
+        <Loading />
+      )}
     </div>
   )
 }

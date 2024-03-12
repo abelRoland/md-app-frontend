@@ -1,14 +1,17 @@
 'use client'
-import TipsContainer from '@/components/TipsContainer'
-import VideosHome from '@/components/VideosHome'
+
+import {
+  TipsContainer,
+  VideosContainer,
+  Modal,
+  LinksContainer,
+} from '@/components'
 import styles from './home.module.css'
 import Link from 'next/link'
-import LinkHome from '@/components/LinkHome'
 import { SparklesIcon } from '@heroicons/react/24/outline'
 import { Users } from '@/lib/global'
 import { useState, useEffect } from 'react'
 import OpenAI from 'openai'
-import Modal from '@/components/Modal'
 
 type HomeProps = {
   user: Users
@@ -66,24 +69,18 @@ export default function Home({ user }: HomeProps) {
         <h2>Videos & Links</h2>
       </div>
       <div className={styles.videosContainer}>
-        <VideosHome />
+        <VideosContainer />
         <div className={styles.videoContainerFooter}>
-          <Link
-            className={styles.seeAllVideosButton}
-            href="/videos?mediaKind=video"
-          >
+          <Link className={styles.seeAllVideosButton} href="/videos">
             SEE ALL
           </Link>
         </div>
       </div>
       <div className={styles.linksContainer}>
-        <LinkHome />
+        <LinksContainer />
 
         <div className={styles.videoContainerFooter}>
-          <Link
-            className={styles.seeAllVideosButton}
-            href="/links?mediaKind=link"
-          >
+          <Link className={styles.seeAllVideosButton} href="/links">
             SEE ALL
           </Link>
         </div>

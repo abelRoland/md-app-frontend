@@ -5,7 +5,6 @@ import { TipRecords } from '@/lib/global'
 import styles from './tipContainer.module.css'
 import Link from 'next/link'
 import Loading from '@/components/Loading'
-import { LoadTop } from '@/lib/constants'
 
 export default function TipContainer({ params }: { params: { id: string } }) {
   const id = params.id
@@ -33,7 +32,7 @@ export default function TipContainer({ params }: { params: { id: string } }) {
       <div className={styles.contentContainer}>
         <div className={styles.pageContentContainer}>
           {loading ? (
-            <Loading loadTop={LoadTop.TOP20} />
+            <Loading />
           ) : (
             <div className={styles.tipContainer}>
               <h2 className={styles.tipIdHeader}>{tip.fields.tip_title}</h2>
