@@ -62,7 +62,12 @@ export default function VideosContainer() {
               }
             >
               <p className={styles.videoTitle}>{media.title}</p>
-              <Link className={styles.videoButton} href={media.mediaLink}>
+              <Link
+                className={styles.videoButton}
+                href={media.mediaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 WATCH
               </Link>
             </div>
