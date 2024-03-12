@@ -62,7 +62,7 @@ export default function VideosContainer() {
               }
             >
               <p className={styles.videoTitle}>{media.title}</p>
-              <Link className={styles.videoButton} href={`videos/${media._id}`}>
+              <Link className={styles.videoButton} href={media.mediaLink}>
                 WATCH
               </Link>
             </div>
